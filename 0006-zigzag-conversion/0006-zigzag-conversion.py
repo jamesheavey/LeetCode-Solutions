@@ -5,7 +5,7 @@ class Solution:
             
         zz = [[] for i in range(numRows)]
         row = col = -1
-        s += ''
+        
         while s != '':
             
             row += 1
