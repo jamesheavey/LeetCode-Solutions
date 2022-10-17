@@ -14,6 +14,7 @@ class Solution:
         values = list(count.values())
         values.sort()
         cumulative = 0
+        
         for x in values:
             cumulative += x
             if cumulative > k: break
