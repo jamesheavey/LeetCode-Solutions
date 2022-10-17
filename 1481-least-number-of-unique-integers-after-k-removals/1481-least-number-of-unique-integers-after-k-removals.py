@@ -9,21 +9,14 @@ class Solution:
             else:
                 count[x] += 1
         
-        print(count)
         # sum the smallest occurences until sum >= k, count how many it takes
         unique = len(count)
         values = list(count.values())
         values.sort()
         cumulative = 0
-        print(unique)
-        print(values)
         for x in values:
             cumulative += x
-            print(cumulative, k, unique)
             if cumulative > k:
-                break
-            if cumulative == k:
-                unique -= 1
                 break
             unique -= 1
         
