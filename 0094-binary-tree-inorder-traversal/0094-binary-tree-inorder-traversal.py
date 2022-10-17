@@ -9,11 +9,16 @@ class Solution:
         t = []
         
         def inorder(root):
+            '''
+            Traverse the left node to end of tree, add the value, return up a node, try the right traversal. repeat.
+            '''
             if root is None:
                 return
-            
+            # traverse the left node to the end of the tree
             inorder(root.left)
+            # append the value of the end node
             t.append(root.val)
+            # traverse the right of the tree
             inorder(root.right)
         
         inorder(root)
