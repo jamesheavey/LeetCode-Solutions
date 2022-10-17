@@ -1,8 +1,11 @@
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        runSum = []
-        cumulative = 0
-        for val in nums:
-            cumulative += val
-            runSum.append(cumulative)
-        return runSum
+        # Create an output array of size equal to given nums size...
+        output = [0] * len(nums)
+        # Set output[0] = nums[0]...
+        output[0] = nums[0]
+        # Traverse all elements through the for loop...
+        for idx in range(1, len(nums)):
+            # Storing the running sum...
+            output[idx] = output[idx - 1] + nums[idx]
+        return output       # Return the running sum of nums...
