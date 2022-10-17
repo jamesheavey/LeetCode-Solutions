@@ -16,8 +16,7 @@ class Solution:
         cumulative = 0
         for x in values:
             cumulative += x
-            if cumulative > k:
-                break
+            if cumulative > k: break
             unique -= 1
         
         return unique
