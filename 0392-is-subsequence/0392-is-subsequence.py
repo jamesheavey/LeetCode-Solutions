@@ -4,4 +4,4 @@ class Solution:
         for c in t:
             if i < len(s) and s[i] == c:
                 i += 1
-        return True if i == len(s) else False
+        return i == len(s)
