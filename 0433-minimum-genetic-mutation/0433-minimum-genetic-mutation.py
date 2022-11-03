@@ -15,6 +15,5 @@ class Solution:
                     if mutation not in seen and mutation in bank:
                         queue.append((mutation, count + 1))
                         seen.add(mutation)
-                        print(queue)
 
         return -1
